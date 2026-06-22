@@ -25,4 +25,4 @@ Practical Adobe After Effects help for motion designers — expressions and rigg
 - `scripts/` — ExtendScript (.jsx) helpers.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

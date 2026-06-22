@@ -22,4 +22,4 @@ Color for motion design — palette construction, gradients, perceptual interpol
 - `references/palettes-and-interpolation.md` — palette construction and perceptual interpolation.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

@@ -23,4 +23,4 @@ The tech-agnostic foundation for deciding how something should move. For motion 
 - `references/twelve-principles.md` — the 12 principles applied to UI and motion graphics.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

@@ -21,4 +21,4 @@ Frame composition for motion designers — grids, safe areas, focal hierarchy, a
 - `references/camera-and-grids.md` — grids, safe areas, focal hierarchy, and 2D/3D camera moves.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

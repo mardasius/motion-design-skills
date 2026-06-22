@@ -21,4 +21,4 @@ Self-contained animated backgrounds for designers and developers — mesh gradie
 - `references/background-recipes.md` — CSS mesh gradients, GLSL shaders, canvas particles, loops, and reduced-motion handling.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

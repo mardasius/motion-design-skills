@@ -21,4 +21,4 @@ Bring brand marks to life — logo intros, stingers, splash screens, and loaders
 - `references/logo-patterns.md` — reveal, draw-on, morph, loop, and sound-logo patterns.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

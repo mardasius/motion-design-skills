@@ -21,4 +21,4 @@ Editing rhythm for motion designers and editors — cutting to the beat, transit
 - `references/editing-techniques.md` — beat syncing, transitions, retiming, and speed ramps.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

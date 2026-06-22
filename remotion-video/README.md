@@ -21,4 +21,4 @@ Programmatic, data-driven video in React with Remotion. For developers and motio
 - `references/api-and-patterns.md` — Remotion API, animation patterns, and render/CLI usage.
 
 ---
-Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — controllable Motion Graphics MP4 from a prompt or data.
+Part of **[Motion Design Skills](../)** · Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.
