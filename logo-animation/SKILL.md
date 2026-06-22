@@ -95,6 +95,8 @@ if (reduce) dl.addEventListener("load", () => dl.setFrame(dl.totalFrames - 1));
 
 ## Deliver & verify (standalone HTML)
 
+> **Packaged helper** (`scripts/`): `scripts/seek-shot.sh anim.html 0 1.5 3` freezes the `?t=N` harness and screenshots each moment; `scripts/contact-sheet.sh sheet.png frame-*.png` tiles them for one-glance review. See `scripts/README.md`.
+
 Logo animation spans web/SVG/Lottie, video, and app splash. **For web/SVG/Lottie delivery use this standalone-HTML loop; for a video logo sting, render via the remotion-video verify loop instead.**
 
 For web/SVG/Lottie, ship **one `.html` file that opens directly in a browser** — inline SVG markup plus the reveal (CSS or one CDN GSAP `<script>`), self-contained. One file is the right tier.

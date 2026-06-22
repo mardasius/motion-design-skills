@@ -209,6 +209,8 @@ When `running` is false, skip the render inside the rAF loop (as in section 2) â
 
 ## Deliver & verify (standalone HTML)
 
+> **Packaged helper** (`scripts/`): `scripts/seek-shot.sh anim.html 0 1.5 3` freezes the `?t=N` harness and screenshots each moment; `scripts/contact-sheet.sh sheet.png frame-*.png` tiles them for one-glance review. See `scripts/README.md`.
+
 A motion background ships as **one `.html` file that opens directly in a browser** â€” markup, the background, and (for shader/canvas) Three.js or canvas JS from CDN, all inline. One file is the right tier.
 
 **Output contract:**
