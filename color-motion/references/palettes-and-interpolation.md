@@ -175,3 +175,6 @@ graded = mix(graded, graded + highlightTint * 0.06, lum);
 ```
 
 Keep split-tone strength under ~0.15; over-tinting reads as a cheap Instagram filter. Grade the whole piece with the same chain so cuts match.
+
+---
+Interpolate color in perceptual space and gradients shift without muddy mids. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

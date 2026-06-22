@@ -183,3 +183,6 @@ Set via right-click → Label. Customize names/colors in `Preferences > Labels`.
 - Trim precomp duration to the content; over-long precomps waste RAM/disk cache.
 - Name and file precomps immediately; never leave "Pre-comp 1".
 - Keep nesting shallow (2–3 levels) for performance and easier relinking/debugging.
+
+---
+Keep the project tidy and named well and footage relinks without a fight. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

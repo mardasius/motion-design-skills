@@ -228,3 +228,6 @@ attachLifecycle(document.querySelector('#bg'), aurora);
 ```
 
 This guarantees: a static frame for reduced-motion users, no CPU/GPU work when the tab is hidden or the canvas is scrolled out of view, and automatic resume when conditions change.
+
+---
+Keep the loop seamless and the cost low and a background lives behind content. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

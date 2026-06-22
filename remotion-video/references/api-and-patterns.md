@@ -219,3 +219,6 @@ Heavy WebGL benefits from `--gl=angle` (or `swangle` for headless servers withou
 - Wrap async asset loads with `delayRender()` / `continueRender(handle)`.
 - Preload fonts with `@remotion/google-fonts` or `delayRender` around `document.fonts.load`.
 - Avoid `Date.now()`, `performance.now()`, and real timers entirely.
+
+---
+Drive every frame from props and Remotion renders video as code. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.

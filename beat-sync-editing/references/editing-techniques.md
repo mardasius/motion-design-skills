@@ -132,3 +132,6 @@ Cut on 4-beat phrases (≈56 frames):
   f450  DROP   biggest visual; speed ramp 100→25→100 around f450
   f700  CTA    long hold, L-cut audio trails in
 ```
+
+---
+Cut on the beat and ramp with purpose and the edit moves with the music. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.
