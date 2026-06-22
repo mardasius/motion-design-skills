@@ -15,6 +15,26 @@ Decide how something should move so it feels right — independent of the tool u
 - Reviewing whether motion respects physics intuition (weight, follow-through, arcs).
 - Synchronizing keyframes to a musical beat or edit accent.
 
+## Three pillars — settle these before any number
+
+Every piece of motion should answer three questions *before* you pick a duration or curve. Skip them and you get technically-correct motion that feels like nothing. These are the shared vocabulary the rest of the collection refers back to.
+
+| Pillar | The question | What it drives |
+|---|---|---|
+| **Emotional intent** | What should the viewer *feel*? (joy, calm, urgency, trust, elegance) | Easing, duration, amplitude/overshoot |
+| **Visual narrative** | What's the micro-story? Setup → action → resolution | Sequencing, staging, what enters when |
+| **Motion craft** | How do we make it believable? | Physics, secondary motion, arcs, follow-through |
+
+## Three motion layers — depth, not flatness
+
+Flat motion = only the main thing moves. Believable motion runs three layers at once:
+
+- **Primary** — the main action the eye follows (the hero move).
+- **Secondary** — supporting richness reacting to the primary (a shadow shifting, an icon nudging, a label settling late).
+- **Ambient** — background life that never demands attention (slow gradient drift, a low-contrast pulse).
+
+> The judgment layer (`motion-direction`) calls these **Hero / Support / Texture** — same three layers, ranked for *what earns motion*. Primary≈Hero, Secondary≈Support, Ambient≈Texture.
+
 ## Core principles
 
 ### Easing is the single biggest lever
@@ -50,6 +70,10 @@ Never reveal a list, grid, or group all at once — it reads as a single flat ev
 - Dense grids: **20-40ms** (more items, less per-item delay, or the tail drags).
 - Cap total reveal at roughly **600-800ms** for a group; if `count * offset` exceeds that, shrink the offset or switch to a distance-based stagger (items further from an origin point start later).
 - Stagger direction should follow the eye: top-to-bottom, or radiating from a focal point.
+
+**The 1/3 Rule (two forms, both universal):**
+- *Distance* — no element travels more than ~1/3 of the screen without an intermediate keyframe or a scale/opacity change. Long unbroken slides read as "the template moved," not "something happened."
+- *Simultaneity* — with 3+ elements, keep no more than ~1/3 in active motion at once. The rest hold or move as ambient. Everything moving together = noise with no focal point.
 
 ### Anticipation and follow-through sell physical motion
 

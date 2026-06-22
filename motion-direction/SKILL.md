@@ -42,6 +42,19 @@ Place the piece on two axes; the cell dictates the motion language defaults.
 
 Pick one cell and commit. Mixing cells within a piece is the most common cause of "inconsistent" motion.
 
+## Motion personality (named presets)
+
+The tone matrix tells you *where* the piece sits; a **motion personality** is the named, numeric preset you hand to whoever animates. Pick ONE per project and apply it everywhere. This is shared vocabulary — other skills (e.g. `gsap-web`, `micro-interaction`, the video packs) can just say "use the Premium personality."
+
+| Personality | Duration | Signature easing | Overshoot | Reads as |
+|---|---|---|---|---|
+| **Playful** | 150–300ms | `ease-out-back` / `cubic-bezier(0.34,1.56,0.64,1)` | 10–20% | fun, bouncy, whimsical |
+| **Premium** | 350–600ms | `cubic-bezier(0.4,0,0.2,1)` | 0% | elegant, minimal, luxury |
+| **Corporate** | 200–400ms | `cubic-bezier(0.2,0,0,1)` | 0–3% | clean, professional, trustworthy |
+| **Energetic** | 100–250ms | `ease-out-expo` | 15–30% | bold, dynamic, hype |
+
+Default: **Corporate** for UI/product, **Playful** for illustration/lifestyle. Maps onto the matrix — Premium≈calm-soft, Corporate≈calm-sharp, Playful≈kinetic-soft, Energetic≈kinetic-sharp. The personality fills the "easing family / base timing unit / motion intensity" rows of the spec below.
+
 ## The motion-language spec
 
 The core artifact. Fill every row with ONE choice and reuse it everywhere.
@@ -59,7 +72,7 @@ Two eases maximum: one "in" (exits) and one "out" (entrances/landings). A third 
 
 ## Motion hierarchy
 
-Not everything earns motion. Rank every element, then animate down the list — and stop early.
+Not everything earns motion. Rank every element, then animate down the list — and stop early. These three tiers are the universal **three motion layers** (see `motion-principles`): Hero = **Primary**, Support = **Secondary**, Texture = **Ambient**.
 
 | Tier | What it is | How it moves |
 |---|---|---|
