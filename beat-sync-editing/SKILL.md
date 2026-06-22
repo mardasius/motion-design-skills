@@ -37,8 +37,8 @@ What's the editing problem?
 
 **Cross-reference — apply the shared frameworks.**
 
-- **Motion Personality** (`motion-direction`) sets cut rhythm: the chosen energy maps straight to phrase length and transition family. Pick one and commit (see the table below).
-- **Three Pillars** + beat-sync (`motion-principles`): settle *emotional intent* first (hype vs. calm) — it decides whether you cut every bar or hold for four. `motion-principles` defines the BPM→beat relationship; this skill turns it into frame-accurate cut points and the transition/retime craft on top.
+- **Motion Personality** (`motion-art-direction`) sets cut rhythm: the chosen energy maps straight to phrase length and transition family. Pick one and commit (see the table below).
+- **Three Pillars** + beat-sync (`animation-principles`): settle *emotional intent* first (hype vs. calm) — it decides whether you cut every bar or hold for four. `animation-principles` defines the BPM→beat relationship; this skill turns it into frame-accurate cut points and the transition/retime craft on top.
 
 ### Motion Personality → cut rhythm
 

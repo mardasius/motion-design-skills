@@ -33,11 +33,11 @@ What are you staging?
        → keep critical content inside title-safe margins
 ```
 
-**Cross-reference — apply the shared frameworks.** This skill is the spatial half of `motion-principles`. Apply them explicitly:
+**Cross-reference — apply the shared frameworks.** This skill is the spatial half of `animation-principles`. Apply them explicitly:
 
-- **1/3 Rule** (`motion-principles`) has two forms and this skill uses both *spatially*: (a) *Composition thirds* — place the focal point on a rule-of-thirds power point (33%/67%); (b) *Distance* — no element travels more than ~1/3 of the frame without an intermediate keyframe or a scale/opacity change, so entrances stay readable.
-- **Three motion layers** (`motion-principles`: Primary / Secondary / Ambient) map directly onto depth: **foreground = Primary** (the move the eye follows), **midground = Secondary** (the subject + supporting reactions), **background = Ambient** (slow, low-contrast life). Parallax speed scales with that role.
-- Settle the **Three Pillars** (Emotional intent / Visual narrative / Motion craft) and the chosen **Motion Personality** (`motion-direction`) *before* numbering a camera move — premium wants slow long pushes, energetic wants whip-pans.
+- **1/3 Rule** (`animation-principles`) has two forms and this skill uses both *spatially*: (a) *Composition thirds* — place the focal point on a rule-of-thirds power point (33%/67%); (b) *Distance* — no element travels more than ~1/3 of the frame without an intermediate keyframe or a scale/opacity change, so entrances stay readable.
+- **Three motion layers** (`animation-principles`: Primary / Secondary / Ambient) map directly onto depth: **foreground = Primary** (the move the eye follows), **midground = Secondary** (the subject + supporting reactions), **background = Ambient** (slow, low-contrast life). Parallax speed scales with that role.
+- Settle the **Three Pillars** (Emotional intent / Visual narrative / Motion craft) and the chosen **Motion Personality** (`motion-art-direction`) *before* numbering a camera move — premium wants slow long pushes, energetic wants whip-pans.
 
 ## Core workflow
 
@@ -68,7 +68,7 @@ Do not fill the frame. Generous negative space around the focal point makes it r
 
 Split the composition into depth layers: **background** (slowest, lowest contrast, often desaturated/blurred), **midground** (the subject), **foreground** (fastest, may blur as it crosses). Parallax = moving layers at different speeds to simulate depth.
 
-These depth layers ARE the `motion-principles` **three motion layers** projected onto Z — each layer's role dictates its speed, contrast, and how much motion it earns:
+These depth layers ARE the `animation-principles` **three motion layers** projected onto Z — each layer's role dictates its speed, contrast, and how much motion it earns:
 
 | Depth | Motion layer | Parallax speed | Contrast / focus | What lives here |
 |---|---|---|---|---|

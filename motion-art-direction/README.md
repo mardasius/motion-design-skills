@@ -1,4 +1,4 @@
-# Motion Direction
+# Motion Art Direction
 
 The senior creative judgment that sits above specific techniques. For motion designers directing a piece — defining a motion language, setting tone and pacing, building motion hierarchy, and keeping everything consistent from shot to shot.
 

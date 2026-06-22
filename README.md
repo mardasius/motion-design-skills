@@ -14,11 +14,11 @@ Works with Claude Code, Cursor, Codex, GitHub Copilot, and 40+ agents.
 
 | Skill | What it does |
 | --- | --- |
-| [motion-principles](./motion-principles) | Tech-agnostic timing, easing, and the 12 principles for natural-feeling motion. |
-| [typography-motion](./typography-motion) | Kinetic typography and text reveals in CSS, GSAP, Framer Motion, and Remotion. |
+| [animation-principles](./animation-principles) | Tech-agnostic timing, easing, and the 12 principles for natural-feeling motion. |
+| [kinetic-typography](./kinetic-typography) | Kinetic typography and text reveals in CSS, GSAP, Framer Motion, and Remotion. |
 | [color-motion](./color-motion) | Palettes, gradients, perceptual interpolation (OKLCH/Lab), grading, and render color management. |
 | [shot-composition](./shot-composition) | Grids, safe areas, focal hierarchy, and 2D/3D camera framing across aspect ratios. |
-| [motion-direction](./motion-direction) | Senior creative direction — motion language, tone, pacing, hierarchy, and restraint. |
+| [motion-art-direction](./motion-art-direction) | Senior creative direction — motion language, tone, pacing, hierarchy, and restraint. |
 | [after-effects](./after-effects) | AE expressions, rigging, export recipes, performance triage, and project hygiene. |
 | [beat-sync-editing](./beat-sync-editing) | Cut to the beat — editing rhythm, transitions, retiming, and speed ramps. |
 | [remotion-video](./remotion-video) | Programmatic, data-driven video in React rendered to MP4/GIF via CLI or renderer. |
@@ -43,11 +43,11 @@ Works with Claude Code, Cursor, Codex, GitHub Copilot, and 40+ agents.
 
 ## Skills
 
-- motion-principles
-- typography-motion
+- animation-principles
+- kinetic-typography
 - color-motion
 - shot-composition
-- motion-direction
+- motion-art-direction
 - after-effects
 - beat-sync-editing
 - remotion-video

@@ -1,4 +1,4 @@
-# Motion Principles
+# Animation Principles
 
 The tech-agnostic foundation for deciding how something should move. For motion designers and developers who want animation that feels natural instead of stiff, floaty, or robotic — covering easing curves, timing, the Graph Editor, and the 12 principles of animation.
 

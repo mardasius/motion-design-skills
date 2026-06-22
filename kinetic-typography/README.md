@@ -1,4 +1,4 @@
-# Typography Motion
+# Kinetic Typography
 
 Kinetic typography and animated text for motion designers and developers. Covers reveal techniques across CSS, GSAP SplitText, Framer Motion, and Remotion — from staggered character reveals to lyric videos and animated title cards.
 

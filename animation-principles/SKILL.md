@@ -1,5 +1,5 @@
 ---
-name: motion-principles
+name: animation-principles
 description: This skill should be used when the user asks to "make this animation feel natural", "fix motion that feels stiff/floaty/cheap", "my animation looks robotic", "choose an easing curve", "how do I use the Graph Editor", "add overshoot or bounce", "Easy Ease isn't enough", "make snappy motion", "pick a duration for this transition", "stagger a list animation", "sync animation to a beat", or "review motion for good timing". It is the tech-agnostic foundation for deciding how something should move.
 version: 0.1.0
 ---
@@ -33,7 +33,7 @@ Flat motion = only the main thing moves. Believable motion runs three layers at 
 - **Secondary** — supporting richness reacting to the primary (a shadow shifting, an icon nudging, a label settling late).
 - **Ambient** — background life that never demands attention (slow gradient drift, a low-contrast pulse).
 
-> The judgment layer (`motion-direction`) calls these **Hero / Support / Texture** — same three layers, ranked for *what earns motion*. Primary≈Hero, Secondary≈Support, Ambient≈Texture.
+> The judgment layer (`motion-art-direction`) calls these **Hero / Support / Texture** — same three layers, ranked for *what earns motion*. Primary≈Hero, Secondary≈Support, Ambient≈Texture.
 
 ## Core principles
 

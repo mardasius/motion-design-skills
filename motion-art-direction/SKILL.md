@@ -1,5 +1,5 @@
 ---
-name: motion-direction
+name: motion-art-direction
 description: This skill should be used when the user asks to "direct a motion graphics video", "do creative/art direction for a video", "define a motion language", "set the tone and pacing", "make the animation feel consistent", "decide what to animate (and what not to)", "turn a brief/brand into motion choices", or needs the senior creative judgment that sits above specific techniques (gsap/lottie/shader). Covers motion language, tone & energy, pacing/rhythm, motion hierarchy, restraint, and cross-shot consistency.
 version: 0.1.0
 ---
@@ -72,7 +72,7 @@ Two eases maximum: one "in" (exits) and one "out" (entrances/landings). A third 
 
 ## Motion hierarchy
 
-Not everything earns motion. Rank every element, then animate down the list — and stop early. These three tiers are the universal **three motion layers** (see `motion-principles`): Hero = **Primary**, Support = **Secondary**, Texture = **Ambient**.
+Not everything earns motion. Rank every element, then animate down the list — and stop early. These three tiers are the universal **three motion layers** (see `animation-principles`): Hero = **Primary**, Support = **Secondary**, Texture = **Ambient**.
 
 | Tier | What it is | How it moves |
 |---|---|---|
