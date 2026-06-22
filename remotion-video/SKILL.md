@@ -129,6 +129,43 @@ npx remotion render Promo out.gif --codec=gif         # GIF output
 
 For batch/data-driven pipelines, render in Node with `@remotion/renderer` (bundle once, render many) — see the reference file.
 
+## Deliver & verify (rendered stills → MP4)
+
+Remotion is frame-deterministic by construction — every frame is a pure function of `useCurrentFrame()`, so you can render any exact frame headlessly with **no seek harness** (this is the heavy-tier counterpart to a web scene's `?t=N`). Use this tier when the output must be an MP4/GIF, must carry exact numbers/text, or batches from data; for a lightweight web animation, deliver standalone HTML instead.
+
+**Output contract:**
+- A Remotion project with the composition registered (`<Composition>` + zod `schema` + `defaultProps`), all motion frame-driven (no timers / `Date.now()` / `Math.random()`).
+- Deliverable = the rendered `out/*.mp4` (plus the project, so the user can re-render with new props/data).
+- Duration data-dependent? compute it in `calculateMetadata`, not by hand.
+
+**Verify loop — render stills → inspect → encode.** Render single frames first (cheap, no video encode), inspect them, and encode the full video only once the frames are right.
+
+```bash
+# 1. Frame-exact stills at start / mid / end (PNG, headless, fast)
+npx remotion still Promo out/f-start.png --frame=0
+npx remotion still Promo out/f-mid.png   --frame=75
+npx remotion still Promo out/f-end.png   --frame=149   # last frame = durationInFrames - 1
+#    render with the SAME props you'll ship, not just defaultProps:
+#    npx remotion still Promo out/f-mid.png --frame=75 --props='{"title":"Launch"}'
+
+# 2. Inspect each PNG — fidelity (matches brief; numbers/text correct) AND
+#    artifacts (text overflow, off-canvas, clipped safe-area, missing font, wrong data binding).
+
+# 3. Only after the stills check out, encode the video:
+npx remotion render Promo out/promo.mp4 --props='{"title":"Launch"}'
+```
+
+- Use `npx remotion compositions` to read each composition's `durationInFrames`/`fps` and pick the end frame.
+- **Data-driven / batch**: verify ONE representative props set via stills *before* batch-rendering all rows — catch a layout bug once instead of N times.
+- **README demo GIF for free**: `npx remotion render Promo out/demo.gif --codec=gif` produces the first-screen proof clip (Direction D).
+
+**Before you finish:**
+1. `npx remotion still` renders cleanly at frame 0, mid, and last — no errors, no missing assets/fonts.
+2. Numbers/text are exact and inside safe areas at every checked frame.
+3. Frame-driven only — no `Date.now()` / `Math.random()` / timers (determinism holds in CI).
+4. Props are zod-typed; the **shipped** props render correctly (not just `defaultProps`).
+5. Full MP4 encoded and plays; (optional) GIF rendered for the README.
+
 ## Quick reference
 
 | Need | Use |
