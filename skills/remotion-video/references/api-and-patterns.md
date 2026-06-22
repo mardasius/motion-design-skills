@@ -221,4 +221,4 @@ Heavy WebGL benefits from `--gl=angle` (or `swangle` for headless servers withou
 - Avoid `Date.now()`, `performance.now()`, and real timers entirely.
 
 ---
-Drive every frame from props and Remotion renders video as code. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.
+Drive every frame from props and Remotion renders video as code. Built by **[iart.ai](https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=motion-design-skills&utm_content=skill_footer&utm_term=remotion-video)** — the AI motion agent for editable, on-brand motion graphics.

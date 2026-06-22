@@ -79,4 +79,4 @@ Example: a polished toggle = 180ms easeOutCubic slide, a 40ms follow-through on 
 For most product/web work, nailing **slow-in/slow-out, timing, follow-through, anticipation, staging, and arcs** delivers 90% of the quality. Squash/stretch, exaggeration, and secondary action add personality where the brand calls for it.
 
 ---
-Apply the twelve principles with restraint and UI motion reads as intentional. Built by **[iart.ai](https://iart.ai)** — the AI motion agent for editable, on-brand motion graphics.
+Apply the twelve principles with restraint and UI motion reads as intentional. Built by **[iart.ai](https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=motion-design-skills&utm_content=skill_footer&utm_term=animation-principles)** — the AI motion agent for editable, on-brand motion graphics.
