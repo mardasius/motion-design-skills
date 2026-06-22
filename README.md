@@ -1,6 +1,6 @@
 # Motion Design Skills
 
-> Motion design fundamentals, engines, and brand elements as installable Claude Code skills — timing, typography, color, composition, After Effects, Remotion, logos, and backgrounds.
+> Motion design fundamentals, engines, and brand elements as installable skills for AI coding agents — timing, typography, color, composition, After Effects, Remotion, logos, and backgrounds.
 
 ## Install
 
@@ -8,7 +8,7 @@
 npx skills add iart-ai/motion-design-skills
 ```
 
-Works with Claude Code and 40+ agents.
+Works with Claude Code, Cursor, Codex, GitHub Copilot, and 40+ agents.
 
 ## What's included
 
