@@ -113,6 +113,46 @@ Per-platform export at a glance: **ProRes 422 HQ/4444** tagged Rec.709 for editi
 
 See `references/color-management.md` for the full diagnosis decision tree, exact menu paths, per-platform export table, the QuickTime workarounds, per-OS/player gamma values, the numeric test-patch method, `ffprobe`/`ffmpeg` tag commands, limited-vs-full-range pitfalls, and the pre-export checklist.
 
+## Deliver & verify (standalone HTML)
+
+For a web palette/gradient/color-transition deliverable, ship **one `.html` file that opens directly in a browser** — no build step. CSS handles the color work; the file is self-contained.
+
+**Output contract:**
+- One `.html` file: your markup + the gradient/transition in inline `<style>` (CDN only if a JS interpolation lib is needed).
+- One animation driver — a CSS `@keyframes` drift or a single `@property` transition; nothing competing.
+- Include the freeze harness below so any moment can be screenshotted deterministically.
+
+**Freeze harness — pin a CSS-animation frame for screenshots.** `?t=N` sets a negative `animation-delay` and pauses, so the gradient/transition lands on the exact frame at `N` seconds.
+
+```html
+<script>
+  const t = new URLSearchParams(location.search).get("t");
+  if (t !== null) {
+    document.querySelectorAll(".bg, .btn").forEach(el => {       // animated elements
+      el.style.animationDelay = (-parseFloat(t)) + "s";
+      el.style.animationPlayState = "paused";
+    });
+  }
+  window.__ready = true;                                          // ready signal for headless wait
+</script>
+```
+
+**Verify loop — render → freeze → screenshot → check:**
+1. Open the file frozen at start / mid / end: `…/color.html?t=0`, `?t=<period/2>`, `?t=<period>`.
+2. Screenshot each frozen frame.
+3. Check **fidelity** (matches the palette/brief) and **color artifacts** — at each frozen frame confirm the gradient/transition has **no banding and no muddy or gray midpoint** (the OKLCH/Lab path stays vivid). Add grain if banding appears.
+
+```bash
+npx playwright screenshot --wait-for-timeout=500 "file://$PWD/color.html?t=8" frame-mid.png
+```
+
+**Before you finish:**
+1. Opens standalone in a browser — no console errors, no missing CDN.
+2. One color driver; `?t=N` freezes the exact frame correctly.
+3. Screenshotted at start / mid / end — no banding, no muddy/gray midpoints, lightness even.
+4. `prefers-reduced-motion` honored (drift paused on a static, readable frame).
+5. Interpolation is in OKLCH/Lab (gradients/`@property`), never raw sRGB.
+
 ## Quick reference
 
 | Need | Do |

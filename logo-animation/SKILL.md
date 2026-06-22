@@ -93,6 +93,53 @@ if (reduce) dl.addEventListener("load", () => dl.setFrame(dl.totalFrames - 1));
 - One clear technique, reveal ≤2.5s, brand geometry intact, clearspace respected.
 - Sound-logo settle aligned to the audio peak (if audio present).
 
+## Deliver & verify (standalone HTML)
+
+Logo animation spans web/SVG/Lottie, video, and app splash. **For web/SVG/Lottie delivery use this standalone-HTML loop; for a video logo sting, render via the remotion-video verify loop instead.**
+
+For web/SVG/Lottie, ship **one `.html` file that opens directly in a browser** — inline SVG markup plus the reveal (CSS or one CDN GSAP `<script>`), self-contained. One file is the right tier.
+
+**Output contract:**
+- One `.html` file: the inline SVG (or Lottie canvas) + the reveal in inline `<style>`/`<script>`.
+- One animation driver — the CSS `@keyframes` draw/build, or a single GSAP timeline; not both.
+- Include the freeze harness below, matched to the technique, so any moment can be screenshotted deterministically.
+
+**Freeze harness — pin a frame for screenshots.** Match the mechanism to the technique:
+
+```html
+<script>
+  const t = new URLSearchParams(location.search).get("t");
+  if (t !== null) {
+    const T = parseFloat(t);
+    // CSS stroke-draw / build-on:
+    document.querySelectorAll("#logo *").forEach(el => {
+      el.style.animationDelay = (-T) + "s";
+      el.style.animationPlayState = "paused";
+    });
+    // GSAP timeline instead? → tl.pause(); tl.seek(T);
+    // SMIL <animate>?       → const s = document.querySelector("svg"); s.pauseAnimations(); s.setCurrentTime(T);
+    // Lottie?               → dl.setFrame(Math.round(T * fps));
+  }
+  window.__ready = true;                                          // ready signal for headless wait
+</script>
+```
+
+**Verify loop — render → freeze → screenshot → check:**
+1. Open the file frozen at start / mid / end of the reveal (≤2.5s): `…/logo.html?t=0`, `?t=<dur/2>`, `?t=<dur>`.
+2. Screenshot each frozen frame.
+3. Check **fidelity** (matches the mark, one clear technique) and **artifacts** — brand geometry undistorted, clearspace clear of motion debris, no half-drawn strokes left at the end frame, the static final frame is the true logo.
+
+```bash
+npx playwright screenshot --wait-for-timeout=500 "file://$PWD/logo.html?t=1.1" frame-mid.png
+```
+
+**Before you finish:**
+1. Opens standalone in a browser — no console errors, no missing CDN.
+2. One technique/driver; `?t=N` freezes the exact frame correctly.
+3. Screenshotted at start / mid / end — geometry intact, clearspace respected, final frame is the clean mark.
+4. `prefers-reduced-motion` honored (final static mark shown, no motion) + static end-frame fallback shipped.
+5. Reveal ≤2.5s; if audio present, the settle lands on the sound-logo peak.
+
 ## Reference files
 
 - `references/logo-patterns.md` — runnable code for every technique: stroke draw-on, mask wipe build-on, GSAP MorphSVG morph, seamless idle loop, Lottie delivery, plus timing tables (0.8–2.5s), brand clearspace rules, and reduced-motion fallbacks.

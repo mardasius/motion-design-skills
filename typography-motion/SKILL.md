@@ -81,6 +81,49 @@ Inline essentials (so this skill stands alone):
 
 Animate `font-variation-settings` (covers any axis: `wght`, `wdth`, `slnt`, `opsz`, plus custom axes), not `font-weight`, to hit non-standard values and to interpolate smoothly. Confirm the loaded font is actually a variable font and the axis range (e.g. wght 100-900) before animating, or the value clamps silently.
 
+## Deliver & verify (standalone HTML)
+
+For a web text reveal / kinetic-title deliverable, ship **one `.html` file that opens directly in a browser** — no build step. One file is the right tier for a headline, title card, or single reveal.
+
+**Output contract:**
+- One `.html` file: markup with `aria-label` on the container, the reveal in inline `<style>` (or one inline GSAP `<script>` from CDN).
+- One animation driver — a CSS `@keyframes` reveal, or a single GSAP timeline; not both.
+- Include the freeze harness below so any moment can be screenshotted deterministically.
+- Split AFTER `document.fonts.ready` so line breaks are correct in the frozen frame.
+
+**Freeze harness — pin a frame for screenshots.**
+
+```html
+<script>
+  const t = new URLSearchParams(location.search).get("t");
+  if (t !== null) {
+    // CSS @keyframes reveal:
+    document.querySelectorAll(".reveal *").forEach(el => {
+      el.style.animationDelay = (-parseFloat(t)) + "s";
+      el.style.animationPlayState = "paused";
+    });
+    // GSAP timeline instead? → tl.pause(); tl.seek(parseFloat(t));
+  }
+  window.__ready = true;                                          // ready signal for headless wait
+</script>
+```
+
+**Verify loop — render → freeze → screenshot → check:**
+1. Open the file frozen at start / mid / end: `…/type.html?t=0`, `?t=<dur/2>`, `?t=<dur>`.
+2. Screenshot each frozen frame.
+3. Check **fidelity** (matches the brief) and **artifacts** — clipped glyphs/descenders, masks that don't fully hide the baseline, FOUC or wrong line breaks before fonts load, blur fringing.
+
+```bash
+npx playwright screenshot --wait-for-timeout=500 "file://$PWD/type.html?t=0.4" frame-mid.png
+```
+
+**Before you finish:**
+1. Opens standalone in a browser — no console errors, no missing CDN/font.
+2. One reveal driver; `?t=N` freezes the exact frame correctly.
+3. Screenshotted at start / mid / end — no clipped glyphs, no FOUC, line breaks correct.
+4. `prefers-reduced-motion` honored (text shown in final state, no motion).
+5. `aria-label` on the container; split fragments `aria-hidden` — copy and screen-reader text intact.
+
 ## Quick reference
 
 | Effect | Core CSS / approach |

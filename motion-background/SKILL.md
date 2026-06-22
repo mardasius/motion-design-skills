@@ -207,6 +207,51 @@ new IntersectionObserver(([e]) => {
 
 When `running` is false, skip the render inside the rAF loop (as in section 2) — the loop stays alive to resume cheaply, but does no GPU/CPU work.
 
+## Deliver & verify (standalone HTML)
+
+A motion background ships as **one `.html` file that opens directly in a browser** — markup, the background, and (for shader/canvas) Three.js or canvas JS from CDN, all inline. One file is the right tier.
+
+**Output contract:**
+- One `.html` file: the background layer + a sample of foreground text on top to check readability/contrast.
+- One animation driver — the CSS `@keyframes`, the shader rAF loop, or the canvas rAF loop; just one.
+- Include the freeze harness below, matched to the technique, so any moment can be screenshotted deterministically.
+
+**Freeze harness — pin a frame for screenshots.** Match the mechanism to the technique:
+
+```html
+<script>
+  const t = new URLSearchParams(location.search).get("t");
+  if (t !== null) {
+    const T = parseFloat(t);
+    // CSS mesh gradient:
+    document.querySelectorAll(".bg").forEach(el => {
+      el.style.animationDelay = (-T) + "s";
+      el.style.animationPlayState = "paused";
+    });
+    // GLSL shader instead? → render exactly one frame at fixed time:
+    //   uniforms.uTime.value = T; renderer.render(scene, camera); running = false;
+    // Canvas particles? → seed deterministically, step the sim to T, draw once, stop the loop.
+  }
+  window.__ready = true;                                          // ready signal for headless wait
+</script>
+```
+
+**Verify loop — render → freeze → screenshot → check:**
+1. Open the file frozen at start / mid / end across one loop period: `…/bg.html?t=0`, `?t=<period/2>`, `?t=<period>`.
+2. Screenshot each frozen frame.
+3. Check **fidelity** (subtle, on-brand, seamless) and **artifacts** — text contrast holds at every frame, no banding in gradients/shader, the loop seam (`t=0` vs `t=period`) matches, no GPU/console errors.
+
+```bash
+npx playwright screenshot --wait-for-timeout=600 "file://$PWD/bg.html?t=12" frame-mid.png
+```
+
+**Before you finish:**
+1. Opens standalone in a browser — no console/WebGL errors, no missing CDN.
+2. One driver; `?t=N` freezes the exact frame (shader renders one frame, canvas sim stepped deterministically).
+3. Screenshotted at start / mid / end — foreground text stays readable, no banding, loop seam invisible.
+4. `prefers-reduced-motion` honored (one static frame rendered, loop stopped) + pauses offscreen/hidden.
+5. `devicePixelRatio` capped at 2; motion is slow and subtle, never out-contrasting content.
+
 ## Quick reference
 
 | Need | Do |
