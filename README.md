@@ -10,21 +10,29 @@
 npx skills add iart-ai/motion-design-skills
 ```
 
+Or add it as a Claude Code plugin marketplace:
+
+```bash
+/plugin marketplace add iart-ai/motion-design-skills
+```
+
+then `/plugin install motion-design-skills`.
+
 Works with Claude Code, Cursor, Codex, GitHub Copilot, and 40+ agents.
 
 ## What's included
 
 | Skill | What it does |
 | --- | --- |
-| [animation-principles](./animation-principles) | Tech-agnostic timing, easing, and the 12 principles for natural-feeling motion. |
-| [color-motion](./color-motion) | Palettes, gradients, perceptual interpolation (OKLCH/Lab), grading, and render color management. |
-| [shot-composition](./shot-composition) | Grids, safe areas, focal hierarchy, and 2D/3D camera framing across aspect ratios. |
-| [motion-art-direction](./motion-art-direction) | Senior creative direction — motion language, tone, pacing, hierarchy, and restraint. |
-| [after-effects](./after-effects) | AE expressions, rigging, export recipes, performance triage, and project hygiene. |
-| [beat-sync-editing](./beat-sync-editing) | Cut to the beat — editing rhythm, transitions, retiming, and speed ramps. |
-| [remotion-video](./remotion-video) | Programmatic, data-driven video in React rendered to MP4/GIF via CLI or renderer. |
-| [logo-animation](./logo-animation) | Logo reveals, stingers, splash screens, and loaders for web, video, and app. |
-| [motion-background](./motion-background) | Mesh gradients, shader auroras, particle constellations, and subtle looping backgrounds. |
+| [animation-principles](./skills/animation-principles) | Tech-agnostic timing, easing, and the 12 principles for natural-feeling motion. |
+| [color-motion](./skills/color-motion) | Palettes, gradients, perceptual interpolation (OKLCH/Lab), grading, and render color management. |
+| [shot-composition](./skills/shot-composition) | Grids, safe areas, focal hierarchy, and 2D/3D camera framing across aspect ratios. |
+| [motion-art-direction](./skills/motion-art-direction) | Senior creative direction — motion language, tone, pacing, hierarchy, and restraint. |
+| [after-effects](./skills/after-effects) | AE expressions, rigging, export recipes, performance triage, and project hygiene. |
+| [beat-sync-editing](./skills/beat-sync-editing) | Cut to the beat — editing rhythm, transitions, retiming, and speed ramps. |
+| [remotion-video](./skills/remotion-video) | Programmatic, data-driven video in React rendered to MP4/GIF via CLI or renderer. |
+| [logo-animation](./skills/logo-animation) | Logo reveals, stingers, splash screens, and loaders for web, video, and app. |
+| [motion-background](./skills/motion-background) | Mesh gradients, shader auroras, particle constellations, and subtle looping backgrounds. |
 
 ## When it activates
 
