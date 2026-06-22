@@ -128,6 +128,7 @@ For web/SVG/Lottie, ship **one `.html` file that opens directly in a browser** �
 1. Open the file frozen at start / mid / end of the reveal (≤2.5s): `…/logo.html?t=0`, `?t=<dur/2>`, `?t=<dur>`.
 2. Screenshot each frozen frame.
 3. Check **fidelity** (matches the mark, one clear technique) and **artifacts** — brand geometry undistorted, clearspace clear of motion debris, no half-drawn strokes left at the end frame, the static final frame is the true logo.
+4. **Iterate:** if any check fails (e.g. a half-drawn stroke at `?t=<dur>` or distorted geometry mid-reveal), fix the stroke-dashoffset/duration/easing, re-render the **same** `?t=N`, and re-screenshot to confirm the fix — loop until every frame is clean.
 
 ```bash
 npx playwright screenshot --wait-for-timeout=500 "file://$PWD/logo.html?t=1.1" frame-mid.png

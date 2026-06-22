@@ -141,6 +141,7 @@ For a web palette/gradient/color-transition deliverable, ship **one `.html` file
 1. Open the file frozen at start / mid / end: `…/color.html?t=0`, `?t=<period/2>`, `?t=<period>`.
 2. Screenshot each frozen frame.
 3. Check **fidelity** (matches the palette/brief) and **color artifacts** — at each frozen frame confirm the gradient/transition has **no banding and no muddy or gray midpoint** (the OKLCH/Lab path stays vivid). Add grain if banding appears.
+4. **Iterate:** if banding or a muddy/gray midpoint shows up, adjust the OKLCH/Lab chroma & lightness (or add grain), re-render the **same** `?t=N`, and re-screenshot to confirm the fix — loop until every frozen frame is clean.
 
 ```bash
 npx playwright screenshot --wait-for-timeout=500 "file://$PWD/color.html?t=8" frame-mid.png
