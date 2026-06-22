@@ -2,6 +2,8 @@
 
 > Motion design fundamentals, engines, and brand elements as installable skills for AI coding agents — timing, typography, color, composition, After Effects, Remotion, logos, and backgrounds.
 
+![Motion Design Skills — animated showcase](./showcase.gif)
+
 ## Install
 
 ```bash
